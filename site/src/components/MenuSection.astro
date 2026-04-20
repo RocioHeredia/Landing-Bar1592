@@ -1,0 +1,65 @@
+---
+import { Image } from 'astro:assets';
+import food1 from '../assets/images/gallery-food-1.jpeg';
+import food2 from '../assets/images/gallery-food-2.jpeg';
+---
+
+<section id="carta" class="section-padding bg-[var(--color-wine)] px-6 relative overflow-hidden">
+
+  <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-[var(--color-wine-dark)] opacity-60 blur-3xl translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[var(--color-brown)] opacity-40 blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+
+  <div class="max-w-screen-xl mx-auto relative z-10">
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-12 items-center">
+
+      <!-- Foto izquierda -->
+      <div class="hidden md:block fade-up">
+        <div
+          class="rounded-[var(--radius)] overflow-hidden aspect-[4/5] hover:rotate-0 transition-transform duration-500"
+          style="transform: rotate(-3deg);"
+        >
+          <Image
+            src={food1}
+            alt="Platos del 1592 Bar"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Contenido central -->
+      <div class="text-center fade-up" style="transition-delay: 0.15s;">
+        <p class="text-[var(--color-gold)] text-xs uppercase tracking-[0.5em] mb-5">Explorá</p>
+        <h2 class="heading-xl text-white mb-6">Nuestra Carta</h2>
+        <p class="body-lg text-white/75 mb-10 max-w-xs mx-auto">
+          Cocina de calidad y coctelería creativa. Una carta pensada para maridar
+          sabores y disfrutar de un brindis diferente.
+        </p>
+        <a
+          href="https://menu.fu.do/1592/qr-menu"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-10 py-4 bg-[var(--color-gold)] text-[var(--color-surface)] text-sm uppercase tracking-widest font-semibold rounded-[var(--radius)] hover:bg-[var(--color-gold-light)] hover:scale-105 transition-all duration-300"
+        >
+          Ver Carta Completa
+        </a>
+      </div>
+
+      <!-- Foto derecha -->
+      <div class="hidden md:block fade-up" style="transition-delay: 0.3s;">
+        <div
+          class="rounded-[var(--radius)] overflow-hidden aspect-[4/5] hover:rotate-0 transition-transform duration-500"
+          style="transform: rotate(3deg);"
+        >
+          <Image
+            src={food2}
+            alt="Gastronomía en 1592 Bar"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

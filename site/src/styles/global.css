@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --color-gold:           #F59E0B;
+  --color-gold-light:     #FCD34D;
+  --color-wine:           #99181B;
+  --color-wine-dark:      #6B0F12;
+  --color-brown:          #451A03;
+  --color-surface:        #050505;
+  --color-surface-card:   #0f0f0f;
+  --color-on-surface:     #f5f0e8;
+  --color-on-surface-muted: #9a8a78;
+  --nav-blur:             20px;
+  --radius:               10px;
+  --section-padding:      clamp(5rem, 10vw, 9rem);
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== TIPOGRAFÍA FLUIDA ===== */
+.heading-display {
+  font-size: clamp(5rem, 14vw, 12rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.heading-xl {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.1;
+}
+
+.heading-lg {
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+}
+
+.heading-md {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.3;
+}
+
+.body-lg {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.75;
+}
+
+/* ===== SECTION PADDING ===== */
+.section-padding {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* ===== FADE-IN ON SCROLL ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== MARQUEE ===== */
+.marquee-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  animation: marquee 28s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-25%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

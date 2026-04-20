@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import heroBg from '../assets/images/hero-bg.jpeg';
+---
+
+<section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+  <Image
+    src={heroBg}
+    alt=""
+    loading="eager"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  />
+
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[var(--color-surface)] to-transparent"></div>
+
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+    <p class="text-[var(--color-gold)] text-xs uppercase tracking-[0.5em] mb-8 font-medium">
+      San Juan, Argentina
+    </p>
+
+    <h1 class="heading-display text-white italic mb-15">
+      1592
+    </h1>
+
+    <p class="text-[var(--color-on-surface-muted)] text-sm md:text-base uppercase tracking-[0.4em] mb-4 font-light">
+      Quince Noventa Y Dos
+    </p>
+
+    <div class="flex items-center justify-center gap-4 mb-12">
+      <span class="h-px w-16 bg-[var(--color-gold)] opacity-70"></span>
+      <p class="text-[var(--color-gold)] text-xs uppercase tracking-[0.4em]">Food, Drinks & Music</p>
+      <span class="h-px w-16 bg-[var(--color-gold)] opacity-70"></span>
+    </div>
+
+  </div>
+
+</section>

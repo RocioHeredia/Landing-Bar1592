@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import cocktails from '../assets/images/gallery-cocktails.jpeg';
+import crowd from '../assets/images/gallery-crowd.jpeg';
+import food1 from '../assets/images/gallery-food-1.jpeg';
+import food2 from '../assets/images/gallery-food-2.jpeg';
+import outdoor from '../assets/images/events-outdoor.jpeg';
+
+const images = [
+  { src: cocktails, alt: 'Brindis de tragos en 1592 Bar' },
+  { src: crowd,     alt: 'Ambiente nocturno en 1592 — gente disfrutando' },
+  { src: food1,     alt: 'Gastronomía en 1592 Bar' },
+  { src: food2,     alt: 'Platos y tragos en 1592 Bar' },
+  { src: outdoor,   alt: '1592 Bar en eventos al aire libre' },
+];
+---
+
+<section id="galeria" class="section-padding bg-[var(--color-surface)] px-6">
+  <div class="max-w-screen-xl mx-auto">
+
+    <div class="text-center mb-16 fade-up">
+      <p class="text-[var(--color-gold)] text-xs uppercase tracking-[0.5em] mb-5">El Ambiente</p>
+      <h2 class="heading-xl text-white">Galería</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+      {images.map((img, i) => (
+        <div
+          class={`rounded-[var(--radius)] overflow-hidden fade-up ${
+            i === 0 ? 'col-span-2 md:col-span-2 aspect-[16/9]' :
+            i === 3 ? 'col-span-2 md:col-span-1 aspect-square' :
+            'aspect-square'
+          }`}
+          style={`transition-delay: ${i * 0.1}s;`}
+        >
+          <Image
+            src={img.src}
+            alt={img.alt}
+            loading="lazy"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
