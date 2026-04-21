@@ -113,14 +113,14 @@ npm run preview   # Preview del build en localhost:4321
 | **Colores** | Gold `#F59E0B` · Wine `#99181B` · Brown `#451A03` · Black `#050505` |
 | **Fuentes** | Playfair Display (títulos) + Inter (cuerpo) — Google Fonts |
 | **Animaciones** | Nivel c — marquee CSS, fade-in IntersectionObserver, hover scale |
-| **Logo** | `mix-blend-mode: screen` sobre nav oscuro (elimina fondo negro del JPEG) |
+| **Logo** | `public/logo.jpeg` — actualizado por el cliente |
 | **Estilo** | Secciones alternas negro/vino oscuro, dorado como acento |
 
 ### Secciones del sitio
 
 `Nav` → `HeroSection` → `MarqueeStrip` → `AboutSection` → `MenuSection` → `GallerySection` → `EventsSection` → `LocationSection` → `FooterSection`
 
-- **Nav:** Fixed, blur on scroll, sin botón CTA (removido por el cliente)
+- **Nav:** Fixed, fondo negro sólido `#010101` siempre (sin transparencia), borde dorado sutil, sin botón CTA (removido por el cliente)
 - **Hero:** Fullscreen sin botón CTA ni scroll indicator (removidos por el cliente)
 - **MarqueeStrip:** Franja dorada animada entre Hero y About
 - **MenuSection:** Fondo vino, CTA "Ver Carta Completa" → `https://menu.fu.do/1592/qr-menu`

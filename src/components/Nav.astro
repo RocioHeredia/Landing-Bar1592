@@ -67,9 +67,6 @@ const navLinks = [
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  window.addEventListener('scroll', () => {
-    nav?.classList.toggle('scrolled', window.scrollY > 80);
-  }, { passive: true });
 
   mobileBtn?.addEventListener('click', () => {
     mobileMenu?.classList.toggle('hidden');
@@ -82,11 +79,7 @@ const navLinks = [
 
 <style>
   #main-nav {
-    background: transparent;
-  }
-  #main-nav.scrolled {
-    background: color-mix(in srgb, var(--color-surface) 88%, transparent);
-    backdrop-filter: blur(var(--nav-blur));
+    background: #010101;
     border-bottom: 1px solid color-mix(in srgb, var(--color-gold) 15%, transparent);
   }
 </style>
