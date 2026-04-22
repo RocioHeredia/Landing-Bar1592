@@ -13,7 +13,7 @@
   --color-on-surface:     #f5f0e8;
   --color-on-surface-muted: #9a8a78;
   --nav-blur:             20px;
-  --radius:               20px;
+  --radius:               25px;
   --section-padding:      clamp(5rem, 10vw, 9rem);
 }
 
