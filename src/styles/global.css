@@ -5,6 +5,7 @@
   --color-gold:           #F59E0B;
   --color-gold-light:     #FCD34D;
   --color-wine:           #99181B;
+  --color-wine-light:     #B82226;
   --color-wine-dark:      #6B0F12;
   --color-brown:          #451A03;
   --color-surface:        #050505;
@@ -12,7 +13,7 @@
   --color-on-surface:     #f5f0e8;
   --color-on-surface-muted: #9a8a78;
   --nav-blur:             20px;
-  --radius:               10px;
+  --radius:               25px;
   --section-padding:      clamp(5rem, 10vw, 9rem);
 }
 
@@ -94,7 +95,7 @@ body {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  animation: marquee 28s linear infinite;
+  animation: marquee 4s linear infinite;
   will-change: transform;
 }
 

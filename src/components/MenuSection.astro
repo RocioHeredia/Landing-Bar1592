@@ -12,7 +12,7 @@ import food2 from '../assets/images/gallery-food-2.jpeg';
   <div class="max-w-screen-xl mx-auto relative z-10">
     <div class="grid md:grid-cols-3 gap-8 lg:gap-12 items-center">
 
-      <!-- Foto izquierda -->
+      <!-- Foto izquierda (solo desktop) -->
       <div class="hidden md:block fade-up">
         <div
           class="rounded-[var(--radius)] overflow-hidden aspect-[4/5] hover:rotate-0 transition-transform duration-500"
@@ -45,7 +45,7 @@ import food2 from '../assets/images/gallery-food-2.jpeg';
         </a>
       </div>
 
-      <!-- Foto derecha -->
+      <!-- Foto derecha (solo desktop) -->
       <div class="hidden md:block fade-up" style="transition-delay: 0.3s;">
         <div
           class="rounded-[var(--radius)] overflow-hidden aspect-[4/5] hover:rotate-0 transition-transform duration-500"
@@ -61,5 +61,26 @@ import food2 from '../assets/images/gallery-food-2.jpeg';
       </div>
 
     </div>
+
+    <!-- Imágenes en mobile: grid 2 columnas debajo del texto -->
+    <div class="grid grid-cols-2 gap-4 mt-8 md:hidden fade-up">
+      <div class="rounded-[var(--radius)] overflow-hidden aspect-[4/5]">
+        <Image
+          src={food1}
+          alt="Platos del 1592 Bar"
+          loading="lazy"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="rounded-[var(--radius)] overflow-hidden aspect-[4/5]">
+        <Image
+          src={food2}
+          alt="Gastronomía en 1592 Bar"
+          loading="lazy"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+
   </div>
 </section>
