@@ -1,4 +1,11 @@
-node_modules/
-dist/
-.astro/
-.vercel/
+
+*
+!.gitignore
+
+!astro.config.mjs
+!package.json
+!package-lock.json
+!tsconfig.json
+
+!public/
+!src/
