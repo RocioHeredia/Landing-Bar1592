@@ -1,0 +1,66 @@
+---
+import { Image } from 'astro:assets';
+import aboutDay from '../assets/images/about-day.jpeg';
+import aboutNight from '../assets/images/about-night.jpeg';
+---
+
+<section id="nosotros" class="section-padding bg-[var(--color-surface)] px-6">
+  <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+    <!-- Text -->
+    <div class="fade-up">
+      <p class="text-[var(--color-gold)] text-xs uppercase tracking-[0.5em] mb-5">Sobre Nosotros</p>
+      <h2 class="heading-xl text-white mb-10">
+        Donde la noche<br /><em>tiene sabor</em>
+      </h2>
+      <div class="space-y-5 body-lg text-[var(--color-on-surface-muted)]">
+        <p>
+          En el corazón de San Juan, 1592 nació como una apuesta al disfrute sin apuros.
+          Un espacio al aire libre donde el tiempo pasa diferente: entre tragos de autor,
+          platos que sorprenden y música que acompaña cada momento.
+        </p>
+        <p>
+          Nuestra carta es una invitación a probar, compartir y brindar.
+          La cocina y la coctelería se piensan juntas, para que cada combinación cuente su propia historia.
+        </p>
+        <p>
+          Desde las 20:30, las puertas abren para quienes buscan más que una salida —
+          buscan una experiencia.
+        </p>
+      </div>
+
+      <div class="mt-12 flex items-center gap-8">
+        <div>
+          <p class="text-[var(--color-gold)] text-2xl font-bold" style="font-family: 'Playfair Display', serif;">Mar — Dom</p>
+          <p class="text-[var(--color-on-surface-muted)] text-xs uppercase tracking-widest mt-1">20:30 a 4:00 hs</p>
+        </div>
+        <div class="w-px h-14 bg-[var(--color-wine)]"></div>
+        <div>
+          <p class="text-[var(--color-gold)] text-2xl font-bold" style="font-family: 'Playfair Display', serif;">San Juan</p>
+          <p class="text-[var(--color-on-surface-muted)] text-xs uppercase tracking-widest mt-1">Argentina</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Images -->
+    <div class="grid grid-cols-2 gap-4 fade-up" style="transition-delay: 0.2s;">
+      <div class="rounded-[var(--radius)] overflow-hidden aspect-[3/4]">
+        <Image
+          src={aboutDay}
+          alt="1592 Bar — terraza al aire libre de día"
+          loading="lazy"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+        />
+      </div>
+      <div class="rounded-[var(--radius)] overflow-hidden aspect-[3/4] mt-10">
+        <Image
+          src={aboutNight}
+          alt="1592 Bar — ambiente nocturno con iluminación"
+          loading="lazy"
+          class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>

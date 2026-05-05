@@ -1,0 +1,18 @@
+---
+const items = ['Food', 'Drinks', 'Music', '1592', 'Quince Noventa Y Dos', 'San Juan'];
+---
+
+<div class="marquee-wrapper py-4 bg-[var(--color-gold)] overflow-hidden" aria-hidden="true">
+  {[0, 1, 2, 3].map(() => (
+    <div class="marquee-track">
+      {items.map(item => (
+        <>
+          <span class="inline-block text-[var(--color-surface)] text-xs uppercase tracking-[0.3em] font-semibold px-6">
+            {item}
+          </span>
+          <span class="text-[var(--color-wine)] text-base leading-none">◆</span>
+        </>
+      ))}
+    </div>
+  ))}
+</div>
